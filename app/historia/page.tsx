@@ -1,5 +1,15 @@
 import Image from "next/image"
 import type { Metadata } from "next"
+import { Sora, Lora } from "next/font/google"
+
+const sora = Sora({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+})
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+})
 
 export const metadata: Metadata = {
   title: "Historia do Sushi - Arte do Sushi",
@@ -22,6 +32,12 @@ function HeroHistoria() {
     <section className="bg-peach overflow-hidden relative">
       <LeafDecoration className="absolute top-4 right-8 opacity-40" />
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-16 md:flex-row md:py-20">
+        <div className="flex-1">
+          <h1 className={`${lora.className} text-4xl font-meddium leading-tight text-foreground md:text-5xl lg:text-6xl text-balance`}>
+            Cultura e história{" "}
+            <span className={`text-primary font-serif ${sora.className}`}>do sushi</span>
+          </h1>
+        </div>
         <div className="flex-1 flex justify-center">
           <Image
             src="/images/sushi-rolls.jpg"
@@ -32,12 +48,7 @@ function HeroHistoria() {
             priority
           />
         </div>
-        <div className="flex-1">
-          <h1 className="text-4xl font-bold text-foreground md:text-5xl text-balance">
-            Cultura e historia{" "}
-            <span className="text-primary font-serif">do sushi</span>
-          </h1>
-        </div>
+
       </div>
     </section>
   )
@@ -145,11 +156,10 @@ function PrincipleCard({
 }) {
   return (
     <div
-      className={`rounded-2xl p-6 md:p-8 ${
-        accent
+      className={`rounded-2xl p-6 md:p-8 ${accent
           ? "bg-olive text-foreground"
           : "bg-forest text-[#FFF5EE]"
-      }`}
+        }`}
     >
       <h3 className={`mb-3 text-lg font-bold md:text-xl ${accent ? "text-foreground" : "text-[#FFF5EE]"}`}>
         {title}

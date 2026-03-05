@@ -2,41 +2,41 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer  className=" bg-red border-t border-border" >
-      <div className="mx-auto max-w-6xl px-6 py-10">
-        <div style={{ color: "#1D2D26" }} className="grid grid-cols-1 gap-8 md:grid-cols-3">
+    <footer  className=" bg-alga border-t border-border" >
+      <div className="  max-w-6xl px-6 py-10 text-primary">
+        <div  className="grid grid-cols-1 gap-8 md:grid-cols-3 text-creme">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <SushiIconSmall />
-              <h3 className="text-base font-bold text-foreground">Arte do Sushi</h3>
+              <h3 className="text-base font-bold ">Arte do Sushi</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm  leading-relaxed">
               Descubra a arte milenar da culinaria japonesa e aprenda a fazer sushi autentico em casa.
             </p>
           </div>
           <div>
-            <h3 className="text-base font-bold text-foreground mb-3">Navegacao</h3>
+            <h3 className="text-base font-bold  mb-3">Navegacao</h3>
             <ul className="flex flex-col gap-2">
               <li>
-                <Link href="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/" className="text-sm  hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/historia" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/historia" className="text-sm  hover:text-primary transition-colors">
                   Historia
                 </Link>
               </li>
               <li>
-                <Link href="/guia-iniciantes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link href="/guia-iniciantes" className="text-sm  hover:text-primary transition-colors">
                   Guia Iniciantes
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <h3 className="text-base font-bold text-foreground mb-3">Sobre</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <h3 className="text-base font-bold  mb-3">Sobre</h3>
+            <p className="text-sm  leading-relaxed">
               Compartilhamos conhecimento sobre a arte do sushi, respeitando as tradicoes japonesas e tornando acessivel para todos que desejam aprender.
             </p>
           </div>

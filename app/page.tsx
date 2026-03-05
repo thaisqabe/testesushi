@@ -7,12 +7,12 @@ import { Sora, Lora } from "next/font/google"
 
 const sora = Sora({
   subsets: ["latin"],
-  weight: ["400", "600", "700"], 
+  weight: ["400", "600", "700"],
 })
 const lora = Lora({
-    subsets: ["latin"],
-    weight: ["400", "600", "700"], 
-  })
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+})
 
 export default function HomePage() {
   return (
@@ -26,12 +26,12 @@ export default function HomePage() {
 
 function HeroSection() {
   return (
-    <section className="relative overflow-hidden ">
-      <LeafDecoration className="absolute top-6 left-6 opacity-40" />
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-1 px-6 py-16 md:flex-row md:py-24">
+    <section className="relative overflow-hidden">
+      {/* <LeafDecoration className="absolute top-6 left-6 opacity-40" /> */}
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-1 px-6 py-16 md:flex-row md:py-35">
         <div className="flex-1">
           <h1 className={`${lora.className} text-4xl font-meddium leading-tight text-foreground md:text-5xl lg:text-6xl text-balance`} >
-            Descubra a elegancia e sofisticacao da{" "}
+            Descubra a elegância e sofisticação da{" "}
             <span className={`text-primary font-serif ${lora.className}`}>Culinária Japonesa</span>
           </h1>
           <div className="mt-8">
@@ -47,17 +47,16 @@ function HeroSection() {
         <div className="flex-1 flex justify-center">
           <div className="relative w-full max-w-md">
             <Image
-              src="/images/sushi-hero-home.jpg"
+              src="/images/home-sushi-rolls.png"
               alt="Bandeja elegante de sushi com variedades de nigiri e maki"
-              width={500}
-              height={400}
-              className="rounded-2xl object-cover"
+              width={800}
+              height={700}
               priority
             />
           </div>
         </div>
       </div>
-      <LeafDecoration className="absolute bottom-12 right-6 opacity-30 rotate-45" />
+      {/* <LeafDecoration className="absolute bottom-12 right-6 opacity-30 rotate-45" /> */}
     </section>
   )
 }
@@ -65,18 +64,41 @@ function HeroSection() {
 function SushiRollSection() {
   return (
     <section className="relative overflow-hidden">
-      {/* Dark green arc */}
       <div className="relative">
-        <svg viewBox="0 0 1440 200" className="w-full block" preserveAspectRatio="none">
-          <path d="M0,0 L1440,0 L1440,120 Q720,220 0,120 Z" fill="#1B4332" />
+        <svg viewBox="0 0 1440 150" className="w-full block" preserveAspectRatio="none">
+          <path d="M0,100 
+     C360,10 1080,10 1440,100 
+     L1440,160 
+     L0,160 
+     Z"
+            fill="#1D2D26" />
         </svg>
       </div>
 
-      {/* Salmon/orange section with white curves */}
+
+
+
+
+
+
+<svg viewBox="0 0 1440 400" preserveAspectRatio="none">
+  <path
+    d="
+      M0,150
+      C360,50 1080,50 1440,150
+      C1080,250 360,250 0,150
+      Z
+    "
+    fill="#1D2D26"
+  />
+</svg>
+
+
+
       <div className="relative bg-peach-dark py-24 md:py-36">
-        {/* Decorative white curved lines */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <svg className=" inset-0 w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="none">
+          <svg className=" inset-0 w-full h-full" viewBox="0 0 14400 400" preserveAspectRatio="none">
+
             <path d="M400,0 Q350,150 320,300 Q290,450 260,600" stroke="white" strokeWidth="2" fill="none" opacity="0.4" />
             <path d="M440,0 Q390,150 360,300 Q330,450 300,600" stroke="white" strokeWidth="2" fill="none" opacity="0.35" />
             <path d="M480,0 Q430,150 400,300 Q370,450 340,600" stroke="white" strokeWidth="2" fill="none" opacity="0.3" />
@@ -122,34 +144,3 @@ function SushiRollSection() {
   )
 }
 
-function LeafDecoration({ className }: { className?: string }) {
-  return (
-    <svg
-      width="80"
-      height="80"
-      viewBox="0 0 80 80"
-      fill="none"
-      className={className}
-    >
-      <path
-        d="M40 10C40 10 20 30 20 50C20 65 30 70 40 70C50 70 60 65 60 50C60 30 40 10 40 10Z"
-        stroke="#C0706B"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.6"
-      />
-      <path
-        d="M40 15C40 15 25 32 25 48C25 60 32 65 40 65C48 65 55 60 55 48C55 32 40 15 40 15Z"
-        stroke="#C0706B"
-        strokeWidth="1"
-        fill="none"
-        opacity="0.4"
-      />
-      <line x1="40" y1="20" x2="40" y2="65" stroke="#C0706B" strokeWidth="1" opacity="0.4" />
-      <line x1="30" y1="40" x2="40" y2="35" stroke="#C0706B" strokeWidth="0.8" opacity="0.3" />
-      <line x1="50" y1="40" x2="40" y2="35" stroke="#C0706B" strokeWidth="0.8" opacity="0.3" />
-      <line x1="28" y1="50" x2="40" y2="44" stroke="#C0706B" strokeWidth="0.8" opacity="0.3" />
-      <line x1="52" y1="50" x2="40" y2="44" stroke="#C0706B" strokeWidth="0.8" opacity="0.3" />
-    </svg>
-  )
-}

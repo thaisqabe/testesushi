@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
-import { Playfair_Display } from 'next/font/google'
+import { Sora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 
 const _geist = Geist({ subsets: ["latin"] });
-const _playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
+const sora = Sora({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
   title: 'Arte do Sushi - Culinaria Japonesa',
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`font-sans antialiased bg-background text-foreground ${_playfair.variable}`}>
+      <body className={`font-sans antialiased bg-background text-foreground ${sora.variable}`}>
         <Header />
         <main>{children}</main>
         <Footer />

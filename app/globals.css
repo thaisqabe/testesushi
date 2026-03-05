@@ -36,7 +36,8 @@
   --olive-light: #D4E157;
   --forest: #1B4332;
   --salmon: #E8734A;
-  --cream: #FFF8F0;
+  --creme: #ddddddea;
+  --alga: #1D2D26;
 }
 
 @theme inline {
@@ -77,7 +78,8 @@
   --color-olive-light: var(--olive-light);
   --color-forest: var(--forest);
   --color-salmon: var(--salmon);
-  --color-cream: var(--cream);
+  --color-creme: var(--creme);
+  --color-alga: var(--alga);
 }
 
 @layer base {
