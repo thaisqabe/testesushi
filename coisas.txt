@@ -1,0 +1,14 @@
+      {/* <div className="relative bg-peach-dark py-24 md:py-36">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <svg className=" inset-0 w-full h-full" viewBox="0 0 14400 400" preserveAspectRatio="none">
+
+            <path d="M400,0 Q350,150 320,300 Q290,450 260,600" stroke="white" strokeWidth="2" fill="none" opacity="0.4" />
+            <path d="M440,0 Q390,150 360,300 Q330,450 300,600" stroke="white" strokeWidth="2" fill="none" opacity="0.35" />
+            <path d="M480,0 Q430,150 400,300 Q370,450 340,600" stroke="white" strokeWidth="2" fill="none" opacity="0.3" />
+            <path d="M520,0 Q470,150 440,300 Q410,450 380,600" stroke="white" strokeWidth="2" fill="none" opacity="0.25" />
+            <path d="M560,0 Q510,150 480,300 Q450,450 420,600" stroke="white" strokeWidth="2" fill="none" opacity="0.2" />
+            <path d="M600,0 Q550,150 520,300 Q490,450 460,600" stroke="white" strokeWidth="2" fill="none" opacity="0.15" />
+          </svg>
+        </div> */}
+
+              {/* </div> */}
