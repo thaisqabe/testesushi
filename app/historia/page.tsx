@@ -1,6 +1,7 @@
 import Image from "next/image"
 import type { Metadata } from "next"
 import { Sora, Lora } from "next/font/google"
+import CardPrincip from "@/components/CardPrincip"
 
 const sora = Sora({
   subsets: ["latin"],
@@ -13,7 +14,6 @@ const lora = Lora({
 
 export const metadata: Metadata = {
   title: "Historia do Sushi - Arte do Sushi",
-  description: "Conheca a cultura e historia milenar do sushi, desde suas origens no Sudeste Asiatico ate a culinaria japonesa moderna.",
 }
 
 export default function HistoriaPage() {
@@ -21,32 +21,33 @@ export default function HistoriaPage() {
     <>
       <HeroHistoria />
       <OrigensSection />
-      <DecorativeCurves />
-      <PrincipiosSection />
+            <Principios />
+
     </>
   )
 }
 
 function HeroHistoria() {
   return (
-    <section className="bg-peach overflow-hidden relative">
-      <LeafDecoration className="absolute top-4 right-8 opacity-40" />
-      <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-16 md:flex-row md:py-20">
-        <div className="flex-1">
-          <h1 className={`${lora.className} text-4xl font-meddium leading-tight text-foreground md:text-5xl lg:text-6xl text-balance`}>
-            Cultura e história{" "}
-            <span className={`text-primary font-serif ${sora.className}`}>do sushi</span>
-          </h1>
-        </div>
+    <section className="relative z-10 overflow-hidden relative mb-40 ">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-50 px-6 py-16 md:flex-row md:py-20">
+
+        <Image
+          src="/images/about-sushi 1.png"
+          alt="Rolos de sushi maki cortados mostrando o interior"
+          width={350}
+          height={280}
+          className="rounded-2xl object-cover"
+          priority
+        />
         <div className="flex-1 flex justify-center">
-          <Image
-            src="/images/sushi-rolls.jpg"
-            alt="Rolos de sushi maki cortados mostrando o interior"
-            width={350}
-            height={280}
-            className="rounded-2xl object-cover"
-            priority
-          />
+          <div className="flex-1">
+            <h1 className={`${lora.className} text-4xl font-meddium leading-tight text-foreground md:text-5xl lg:text-6xl text-balance`}>
+              Cultura e história{" "}
+              <span className={`text-primary font-serif ${lora.className}`}>do sushi</span>
+            </h1>
+
+          </div>
         </div>
 
       </div>
@@ -56,15 +57,18 @@ function HeroHistoria() {
 
 function OrigensSection() {
   return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="rounded-3xl bg-peach p-8 md:p-12">
-          <h2 className="mb-6 font-serif text-3xl font-bold text-foreground md:text-4xl">
+    <section className="relative py-16 md:py-24">
+
+      
+      <div className="relative mx-auto max-w-6xl px-6 z-10">
+        
+        <div className="rounded-3xl bg-[#EB8D55] p-8 md:p-12 z-10">
+          <h2 className={`${lora.className} mb-6 text-5xl font-bold text-foreground md:text-4xl text-white`} >
             Origens do sushi
           </h2>
           <div className="flex flex-col gap-8 md:flex-row">
             <div className="flex-1">
-              <div className="flex flex-col gap-4 text-sm leading-relaxed text-foreground/80">
+              <div className="flex flex-col gap-9 text-base mt-4 leading-relaxed text-foreground/80 text-white">
                 <p>
                   O sushi tem suas raizes no seculo VII, quando surgiu como um metodo de conservacao de peixes em arroz fermentado no Sudeste Asiatico. O peixe era preservado em arroz fermentado e depois o arroz era descartado.
                 </p>
@@ -78,23 +82,19 @@ function OrigensSection() {
             </div>
             <div className="flex-1 flex justify-center md:justify-end">
               <Image
-                src="/images/sushi-chef.jpg"
+                src="/images/image 1.png"
                 alt="Chef de sushi japones preparando sushi em um restaurante tradicional"
-                width={360}
-                height={280}
+                width={300}
+                height={160}
                 className="rounded-2xl object-cover"
               />
             </div>
           </div>
         </div>
       </div>
-    </section>
-  )
-}
 
-function DecorativeCurves() {
-  return (
-    <div className="relative overflow-hidden">
+
+          <div className="relative overflow-hidden mt-20 z-0">
       <svg viewBox="0 0 1440 120" className="w-full block" preserveAspectRatio="none">
         <path d="M0,60 Q360,0 720,60 Q1080,120 1440,60" stroke="#F5C6A0" strokeWidth="3" fill="none" opacity="0.4" />
         <path d="M0,70 Q360,10 720,70 Q1080,130 1440,70" stroke="#F5C6A0" strokeWidth="2" fill="none" opacity="0.3" />
@@ -102,101 +102,148 @@ function DecorativeCurves() {
         <path d="M0,50 Q360,-10 720,50 Q1080,110 1440,50" stroke="#F5C6A0" strokeWidth="2" fill="none" opacity="0.2" />
       </svg>
     </div>
-  )
-}
-
-function PrincipiosSection() {
-  return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        {/* Header card */}
-        <div className="mx-auto mb-12 max-w-xl rounded-full bg-forest px-8 py-6 text-center">
-          <h2 className="mb-2 font-serif text-2xl font-bold text-[#FFF5EE] md:text-3xl">
-            Principios Fundamentais
-          </h2>
-          <p className="text-sm text-[#FFF5EE]/80">
-            A culinaria japonesa e guiada por valores profundos que vao alem do sabor
-          </p>
-        </div>
-
-        {/* Principles grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          <PrincipleCard
-            title="Respeito aos Ingredientes"
-            description="A filosofia japonesa de valorizar cada ingrediente em sua forma mais pura e natural."
-          />
-          <PrincipleCard
-            title="Hospitalidade (Omotenashi)"
-            description="A arte de antecipar e atender as necessidades dos convidados com sinceridade."
-          />
-          <PrincipleCard
-            title="Simplicidade Elegante"
-            description="Menos e mais - cada elemento tem um proposito e significado."
-            accent
-          />
-          <PrincipleCard
-            title="Harmonia com as Estacoes"
-            description="Usar ingredientes sazonais no auge de seu frescor e sabor."
-            accent
-          />
-        </div>
-      </div>
+    
     </section>
   )
 }
 
-function PrincipleCard({
-  title,
-  description,
-  accent = false,
-}: {
-  title: string
-  description: string
-  accent?: boolean
-}) {
-  return (
-    <div
-      className={`rounded-2xl p-6 md:p-8 ${accent
-          ? "bg-olive text-foreground"
-          : "bg-forest text-[#FFF5EE]"
-        }`}
-    >
-      <h3 className={`mb-3 text-lg font-bold md:text-xl ${accent ? "text-foreground" : "text-[#FFF5EE]"}`}>
-        {title}
-      </h3>
-      <p className={`text-sm leading-relaxed ${accent ? "text-foreground/80" : "text-[#FFF5EE]/80"}`}>
-        {description}
-      </p>
-    </div>
+function Principios(){
+  return(
+
+
+
+    <section className="relative py-16 md:py-24 z-10">
+
+
+
+ <svg
+        viewBox="0 0 1280 2180"
+        className="absolute inset-0 w-full h-full object-cover mt-0 z-5"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+ 
+        <ellipse cx="613.5" cy="1138.5" rx="1576.5" ry="1138.5" fill="#1d2d26" />
+        {/* hidden sm:block */}
+        <ellipse
+          cx="622"
+          cy="1045"
+          rx="1467"
+          ry="893"
+          fill="#ffffff"
+        />
+
+        <ellipse
+          cx="625"
+          cy="1036.5"
+          rx="1157"
+          ry="713.5"
+          fill="#F58D92"
+        />
+
+        <defs>
+          <path id="salmonLine" d="m398.515 355.25-.965.263c3.785 14.663 6.555 27.234 9.18 42.052 31.629 124.503-46.77 232.692-87.494 347.335-37.93 120.012-5.024 247.422 36.874 360.91 4.263 11.41 9.693 24.29 14.721 34.75q9.002 18.93 20.361 38.31c.306-.13.612-.26.917-.4-4.308-14.33-8.664-28.06-13.098-41.22-3.659-10.95-8.372-23.99-12.6-35.3-41.618-112.743-74.334-237.293-38.782-354.512 38.061-111.704 116.327-226.308 81.138-350.255-2.978-14.817-6.106-27.342-10.252-41.933" />
+        </defs>
+
+        <g fill="#ffffff">
+          <use href="#salmonLine" transform="translate(-200 300)" />
+          <use href="#salmonLine" transform="translate(0 300)" />
+          <use href="#salmonLine" transform="translate(200 300)" />
+          <use href="#salmonLine" transform="translate(300 300)" />
+          <use href="#salmonLine" transform="translate(500 300)" />
+          <use href="#salmonLine" transform="translate(700 300)" />
+        </g>
+
+      </svg>
+    
+    <div className="relative z-10">
+
+<CardPrincip
+  titulo="Princípios Fundamentais"
+  descricao="A culinária japonesa é guiada por valores profundos que vão além do sabor."
+  rounded="pill"
+  tam="lg"
+  center
+/>
+</div>
+<div className="grid grid-cols-1 gap-6 md:grid-cols-2 mt-5 relative z-10">
+
+  <CardPrincip
+    titulo="Respeito aos Ingredientes"
+    descricao="A filosofia japonesa de valorizar cada ingrediente em sua forma mais pura e natural."
+      rounded="pill"
+  tam="md"
+  center
+  />
+
+  <CardPrincip
+    titulo="Hospitalidade (Omotenashi)"
+    descricao="A arte de antecipar e atender as necessidades dos convidados com sinceridade."
+          rounded="pill"
+  tam="md"
+  center
+  />
+
+  <CardPrincip
+    titulo="Simplicidade Elegante"
+    descricao="Menos é mais - cada elemento tem um propósito e significado."
+          rounded="pill"
+  tam="md"
+  center
+  />
+
+  <CardPrincip
+    titulo="Harmonia com as Estações"
+    descricao="Usar ingredientes sazonais no auge de seu frescor e sabor."
+          rounded="pill"
+  tam="md"
+  center
+  />
+
+</div>
+</section>
+
   )
 }
 
-function LeafDecoration({ className }: { className?: string }) {
-  return (
-    <svg
-      width="70"
-      height="70"
-      viewBox="0 0 80 80"
-      fill="none"
-      className={className}
-    >
-      <path
-        d="M40 10C40 10 20 30 20 50C20 65 30 70 40 70C50 70 60 65 60 50C60 30 40 10 40 10Z"
-        stroke="#C0706B"
-        strokeWidth="1.5"
-        fill="none"
-        opacity="0.6"
-      />
-      <path
-        d="M40 15C40 15 25 32 25 48C25 60 32 65 40 65C48 65 55 60 55 48C55 32 40 15 40 15Z"
-        stroke="#C0706B"
-        strokeWidth="1"
-        fill="none"
-        opacity="0.4"
-      />
-      <line x1="40" y1="20" x2="40" y2="65" stroke="#C0706B" strokeWidth="1" opacity="0.4" />
-      <line x1="30" y1="40" x2="40" y2="35" stroke="#C0706B" strokeWidth="0.8" opacity="0.3" />
-      <line x1="50" y1="40" x2="40" y2="35" stroke="#C0706B" strokeWidth="0.8" opacity="0.3" />
-    </svg>
-  )
-}
+
+// function PrincipiosSection() {
+//   return (
+//     <section className="py-16 md:py-24">
+      
+//       <div className="mx-auto max-w-6xl px-6">
+//         {/* Header card */}
+//         <div className="mx-auto mb-12 max-w-xl rounded-full bg-forest px-8 py-6 text-center">
+//           <h2 className="mb-2 font-serif text-2xl font-bold text-[#FFF5EE] md:text-3xl">
+//             Principios Fundamentais
+//           </h2>
+//           <p className="text-sm text-[#FFF5EE]/80">
+//             A culinaria japonesa e guiada por valores profundos que vao alem do sabor
+//           </p>
+//         </div>
+
+//         {/* Principles grid */}
+//         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+//           <PrincipleCard
+//             title="Respeito aos Ingredientes"
+//             description="A filosofia japonesa de valorizar cada ingrediente em sua forma mais pura e natural."
+//           />
+//           <PrincipleCard
+//             title="Hospitalidade (Omotenashi)"
+//             description="A arte de antecipar e atender as necessidades dos convidados com sinceridade."
+//           />
+//           <PrincipleCard
+//             title="Simplicidade Elegante"
+//             description="Menos e mais - cada elemento tem um proposito e significado."
+//             accent
+//           />
+//           <PrincipleCard
+//             title="Harmonia com as Estacoes"
+//             description="Usar ingredientes sazonais no auge de seu frescor e sabor."
+//             accent
+//           />
+//         </div>
+//       </div>
+//     </section>
+//   )
+// }
+

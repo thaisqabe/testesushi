@@ -10,8 +10,10 @@ const _geist = Geist({ subsets: ["latin"] });
 const sora = Sora({ subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  title: 'Arte do Sushi - Culinaria Japonesa',
-  description: 'Descubra a arte milenar da culinaria japonesa e aprenda a fazer sushi autentico em casa.',
+  title: 'Arte do Sushi - Culinária Japonesa',
+    icons: {
+    icon: '/images/sushi-favicon.png', 
+  },
 }
 
 export default function RootLayout({
