@@ -11,11 +11,9 @@ Um site educativo e interativo sobre a arte e história do sushi, desenvolvido c
 - **Sessões informativas** sobre a história e origens do sushi.  
 - **Cards de passos** para iniciantes aprenderem a fazer sushi em casa.  
 - **Princípios fundamentais** da culinária japonesa.  
-- **Componentização completa**: cada card e sessão é independente e personalizável via props.  
-- **SVGs e imagens de fundo** para estilo visual diferenciado.  
+- **Componentização de cards**.  
+- **SVGs** .  
 - **Responsivo**: ajustes de layout para desktop, tablet e mobile.  
-- **Imagens decorativas nos cantos** que desaparecem em telas menores que 1300px.  
-- **Favicon** global aplicado em todas as páginas.
 
 ---
 
