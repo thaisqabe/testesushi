@@ -44,7 +44,7 @@ function HeroHistoria() {
           <div className="flex-1">
             <h1 className={`${lora.className} text-4xl font-meddium leading-tight text-foreground md:text-5xl lg:text-6xl text-balance`}>
               Cultura e história{" "}
-              <span className={`text-primary font-serif ${lora.className}`}>do sushi</span>
+              <span className={`text-primary ${lora.className}`}>do sushi</span>
             </h1>
 
           </div>
@@ -70,14 +70,12 @@ function OrigensSection() {
             <div className="flex-1">
               <div className="flex flex-col gap-9 text-base mt-4 leading-relaxed text-foreground/80 text-white">
                 <p>
-                  O sushi tem suas raizes no seculo VII, quando surgiu como um metodo de conservacao de peixes em arroz fermentado no Sudeste Asiatico. O peixe era preservado em arroz fermentado e depois o arroz era descartado.
+O sushi tem suas raízes no século VII, quando surgiu como um método de conservação de peixes em arroz fermentado no Sudeste Asiático. O peixe era preservado em arroz fermentado e depois o arroz era descartado.                </p>
+                <p>
+                  {'No período Edo (1603-1868), em Tóquio, o sushi evoluiu para sua forma moderna. O chef Hanaya Yohei criou o "edomae-zushi" (sushi ao estilo de Edo), usando peixe fresco da baía de Tóquio e servindo-o imediatamente sobre arroz temperado.'}
                 </p>
                 <p>
-                  {'No periodo Edo (1603-1868), em Toquio, o sushi evoluiu para sua forma moderna. O chef Hanaya Yohei criou o "edomae-zushi" (sushi ao estilo de Edo), usando peixe fresco da baia de Toquio e servindo-o imediatamente sobre arroz temperado.'}
-                </p>
-                <p>
-                  Esta inovacao transformou o sushi de um metodo de preservacao para uma experiencia gastronomica que celebra o frescor e a qualidade dos ingredientes.
-                </p>
+Esta inovação transformou o sushi de um método de preservação para uma experiência gastronômica que celebra o frescor e a qualidade dos ingredientes.                </p>
               </div>
             </div>
             <div className="flex-1 flex justify-center md:justify-end">

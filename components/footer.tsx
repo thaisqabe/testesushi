@@ -2,20 +2,20 @@ import Link from "next/link"
 
 export function Footer() {
   return (
-    <footer  className=" bg-alga border-t border-border flex flex-col items-center justify-center" >
+    <footer className=" bg-alga border-t border-border flex flex-col items-center justify-center" >
       <div className="  max-w-6xl px-6 py-10 text-primary">
-        <div  className="grid grid-cols-1 gap-8 md:grid-cols-3 text-creme">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 text-creme">
           <div>
             <div className="flex items-center gap-2 mb-3">
               <SushiIconSmall />
               <h3 className="text-base font-bold ">Arte do Sushi</h3>
             </div>
             <p className="text-sm  leading-relaxed">
-              Descubra a arte milenar da culinaria japonesa e aprenda a fazer sushi autentico em casa.
+              Descubra a arte milenar da culinária japonesa e aprenda a fazer sushi autêntico em casa.
             </p>
           </div>
           <div>
-            <h3 className="text-base font-bold  mb-3">Navegacao</h3>
+            <h3 className="text-base font-bold  mb-3">Navegação</h3>
             <ul className="flex flex-col gap-2">
               <li>
                 <Link href="/" className="text-sm  hover:text-primary transition-colors">
@@ -24,7 +24,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/historia" className="text-sm  hover:text-primary transition-colors">
-                  Historia
+                  História
                 </Link>
               </li>
               <li>
@@ -37,7 +37,7 @@ export function Footer() {
           <div>
             <h3 className="text-base font-bold  mb-3">Sobre</h3>
             <p className="text-sm  leading-relaxed">
-              Compartilhamos conhecimento sobre a arte do sushi, respeitando as tradicoes japonesas e tornando acessivel para todos que desejam aprender.
+              Compartilhamos conhecimento sobre a arte do sushi, respeitando as tradições japonesas e tornando acessível para todos que desejam aprender.
             </p>
           </div>
         </div>

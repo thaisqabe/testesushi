@@ -34,7 +34,7 @@ function HeroGuia() {
 
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-8 px-6 py-16 md:flex-row md:py-20">
         <div className="flex-1">
-          <h1 className={`${lora.className} text-3xl font-bold leading-tight text-foreground md:text-4xl text-balance`}>
+          <h1 className={`${lora.className}  text-3xl font-meddium leading-tight text-foreground md:text-5xl  text-balance`}>
             Guia básico para{" "}
             <span className={`text-primary  block  ${lora.className}`}>Iniciantes</span>
           </h1>
